@@ -39,7 +39,7 @@ public class IgroMasteryTest extends CommonConditions{
 
     @Test
     @Order(2)
-    public void addToCartProductWithCorrespondingArticleTest()
+    public void addToCartProductWithNameTest()
     {
 
         setUp();
@@ -146,6 +146,7 @@ public class IgroMasteryTest extends CommonConditions{
                 .searchForProductName(item.getName())
                 .selectRedBicycle()
                 .addMoreItemToOrder("3")
+                .clickToEmpty()
                 .checkCostItem()
                 .addToBasket()
                 .openCart(driver,"https://igromaster.by/personal/cart/");
